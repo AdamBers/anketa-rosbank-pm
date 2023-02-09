@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <title>РосБанк</title>
+    <link rel="shortcut icon" href="./img/title.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="wrapper">
+            <div class="header">
+                <img src="./img/logo.svg" alt="logo">
+            </div>
+            <form action="end.html" id='myForm'>
+                <div class="main-question">
+                    <p>Благодарим Вас за готовность принять участие в исследовании!</p>
+                </div>
+                <div class="question-title">
+                    <p> В данном опросе Вы оцениваете опыт взаимодействия с Персональным менеджером в
+                        рамках Премиального обслуживания. </p>
+                    <p>Опрос займет не больше 3-х минут.</p>
+                    <p>Ваши ответы помогут нам узнать о проблемах и сделать Ваше обслуживание в банке лучше.</p>
+                </div>
+
+                <fieldset>
+                    <p>Знакомы ли вы со своим персональным менеджером?</p>
+                    <input type="radio" id="familiar" name="familiarity" value="familiar">
+                    <label for="familiar">Да, знаком(а) лично</label>
+                    <input type="radio" id="knowName" name="familiarity" value="knowName">
+                    <label for="knowName">Знаю как зовут менеджера, но лично не знаком(а)</label>
+                    <input type="radio" id="notFamiliar" name="familiarity" value="notFamiliar">
+                    <label for="notFamiliar">Не знаком(а) с менеджером и не знаю, как его (её) зовут</label>
+                    <input type="radio" id="diffToAnswer" name="familiarity" value="diffToAnswer">
+                    <label for="diffToAnswer">Затрудняюсь ответить</label>
+                </fieldset>
+
+                <fieldset class="namePM">
+                    <p>Как зовут вашего персонального менеджера?</p>
+                    <input type="text" id="familiar" name="namePM" value="" placeholder="Введите имя">
+                </fieldset>
+
+                <fieldset>
+                    <p class="q-3">Насколько вы довольны
+                        работой вашего персонального менеджера?</p>
+                    <p class="sub-question">Пожалуйста, оценивайте в этом вопросе именно взаимодействие с персональным
+                        менеджером, имя
+                        которого вы записали в предыдущем вопросе, а НЕ работу банка или премиальное обслуживание в
+                        целом.</p>
+                    <p class="sub-question-2">Используйте шкалу от 0 до 10, где «10» означает «Полностью довольны», а
+                        «0» – «Совсем недовольны».</p>
+
+
+                    <input type="radio" id="familiar" name="familiarity" value="familiar">
+                    <label for="familiar">Да, знаком(а) лично</label>
+                    <input type="radio" id="knowName" name="familiarity" value="knowName">
+                    <label for="knowName">Знаю как зовут менеджера, но лично не знаком(а)</label>
+                    <input type="radio" id="notFamiliar" name="familiarity" value="notFamiliar">
+                    <label for="notFamiliar">Не знаком(а) с менеджером и не знаю, как его (её) зовут</label>
+                    <input type="radio" id="diffToAnswer" name="familiarity" value="diffToAnswer">
+                    <label for="diffToAnswer">Затрудняюсь ответить</label>
+                </fieldset>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <!-- <div class="rating" onchange="handleStar(event)">
+                    <input type="radio" name="star" id="star1" value="5">
+                    <label for="star1" class="fa fa-star" id="star1label"></label>
+                    <input type="radio" name="star" id="star2" value="4">
+                    <label for="star2" class="fa fa-star" id="star2label"></label>
+                    <input type="radio" name="star" id="star3" value="3">
+                    <label for="star3" class="fa fa-star" id="star3label"></label>
+                    <input type="radio" name="star" id="star4" value="2">
+                    <label for="star4" class="fa fa-star" id="star4label"></label>
+                    <input type="radio" name="star" id="star5" value="1">
+                    <label for="star5" class="fa fa-star" id="star5label"></label>
+                </div> 
+                <div class="error-message hidden" id='error-message'>
+                    <p class="message">Пожалуйста, выберите оценку от 1 до 5</p>
+                </div>
+                <div class="content">
+                    <div class="q-1 hidden" id='question1'>
+                        <p class="question">Что нам нужно улучшить?</p>
+                        <p class="sub-question">Можно выбрать несколько вариантов</p>
+                        <fieldset onchange="inputChange()">
+                            <input type="checkbox" id="amount" name="sadFor" value="amount">
+                            <label for="amount">Количество банкоматов в моем городе</label>
+                            <input type="checkbox" id="badWork" name="sadFor" value="badWork">
+                            <label for="badWork">Исправную работу банкоматов</label>
+                            <input type="checkbox" id="slowWork" name="sadFor" value="slowWork">
+                            <label for="slowWork">Скорость работы банкоматов</label>
+                            <input type="checkbox" id="notEnoughfunc" name="sadFor" value="notEnoughfunc">
+                            <label for="notEnoughfunc">Широту функционала в банкоматах</label>
+                            <input type="checkbox" id="badMenu" name="sadFor" value="badMenu">
+                            <label for="badMenu">Простоту меню</label>
+                            <input type="checkbox" id="another" name="sadFor" value="another"
+                                onchange="toggleComment()">
+                            <label for="another">Другое (укажите):</label>
+                        </fieldset>
+                    </div>
+                    <div class="error-message_2 hidden" id="error_2">
+                        <p class="message">Пожалуйста, выберите вариант ответа</p>
+                    </div>
+                    <div class="comment hidden" id="comment_div">
+                        <p class="comment_p ">Будем признательны Вам за любую дополнительную информацию о
+                            вашем опыте использования банкоматов Росбанка и банков-партнеров:</p>
+                        <textarea cols="60" name="text" wrap="soft" name="comment" id="comment"
+                            placeholder="Ваш комментарий..." value="" oninput="handleComment(event)"
+                            class=""></textarea>
+                    </div>
+                    <div class="error-message_3 hidden" id="error_3">
+                        <p class="message">Пожалуйста, введите комментарий</p>
+                    </div>
+                </div>-->
+            </form>
+        </div>
+
+        <input type="submit" id="send" class="" form="myForm" value="Оценить">
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

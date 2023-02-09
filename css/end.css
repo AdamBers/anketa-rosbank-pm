@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100%;
+    border: 1px solid rgba(35, 35, 35, 0.1);
+    box-shadow: 6px 6px 12px #c5c5c5,
+        -6px -6px 12px #fbfbfb;
+}
+
+
+.header {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #FAFAFA;
+    border-bottom: 1px solid rgba(68, 68, 68, 0.1);
+}
+
+.end-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+#end-img {
+    margin-bottom: 32px;
+}
+
+.thanks {
+    min-height: 24px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: #1E2025;
+    margin-bottom: 16px;
+}
+
+.youHelpUs {
+    height: 20px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #8B95A4;
+}
+
+
+#ready {
+    margin: 16px;
+    min-width: calc(100% - 32px);
+    height: 48px;
+    background-color: #E40038;
+    color: #fff;
+    border-radius: 8px;
+    font-family: "Source Sans Pro", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    border: none;
+    cursor: pointer;
+    width: inherit
+}
