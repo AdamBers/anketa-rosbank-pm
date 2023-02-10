@@ -33,6 +33,7 @@ body {
     border: 1px solid rgba(35, 35, 35, 0.1);
     box-shadow: 6px 6px 12px #c5c5c5,
         -6px -6px 12px #fbfbfb;
+
 }
 
 .header {
@@ -188,19 +189,20 @@ textarea:focus {
 
 
 
-input[type=radio]~label {
+input[type=radio]~label,
+input[type=checkbox]~label {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     display: flex;
     align-items: center;
     color: #000C1A;
-    padding: 12px;
+    padding: 8px;
     background: #E5E7EA;
     margin-bottom: 12px;
-    border-radius: 26px;
+    border-radius: 12px;
     width: fit-content;
     cursor: pointer;
 }
@@ -317,7 +319,7 @@ textarea::placeholder {
     line-height: 18px;
     color: rgba(0, 0, 0, 0.6);
     margin-bottom: 12px;
-    width: 300px;
+    /* width: 300px; */
 }
 
 .question-title::before {
@@ -343,7 +345,7 @@ textarea::placeholder {
 
 fieldset {
     border: none;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
 fieldset p {
@@ -353,11 +355,12 @@ fieldset p {
     font-size: 20px;
     line-height: 23px;
     color: #1E2025;
-    margin-bottom: 40px;
+    margin-bottom: 25px;
 }
 
 .wrapper {
     margin-bottom: 20px;
+
 }
 
 fieldset input[type=text] {
@@ -397,4 +400,42 @@ input[type=text]::placeholder {
     align-items: center;
     text-align: center;
     color: #000C1A;
+}
+
+.sub-1 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 23px;
+    color: #000C1A;
+    margin-bottom: 16px;
+    margin-top: 50px;
+}
+
+.sub-2 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    color: #000C1A;
+    margin-bottom: 8px;
+}
+
+.sub-3 {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #8B95A4;
+    margin-bottom: 32px;
+}
+
+.range {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }

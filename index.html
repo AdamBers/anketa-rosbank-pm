@@ -29,7 +29,7 @@
                     <p>Ваши ответы помогут нам узнать о проблемах и сделать Ваше обслуживание в банке лучше.</p>
                 </div>
 
-                <fieldset>
+                <fieldset name="q-1">
                     <p>Знакомы ли вы со своим персональным менеджером?</p>
                     <input type="radio" id="familiar" name="familiarity" value="familiar">
                     <label for="familiar">Да, знаком(а) лично</label>
@@ -41,12 +41,12 @@
                     <label for="diffToAnswer">Затрудняюсь ответить</label>
                 </fieldset>
 
-                <fieldset class="namePM">
+                <fieldset class="namePM" name="q-2">
                     <p>Как зовут вашего персонального менеджера?</p>
                     <input type="text" id="familiar" name="namePM" value="" placeholder="Введите имя">
                 </fieldset>
 
-                <fieldset>
+                <fieldset name="q-3">
                     <p class="q-3">Насколько вы довольны
                         работой вашего персонального менеджера?</p>
                     <p class="sub-question">Пожалуйста, оценивайте в этом вопросе именно взаимодействие с персональным
@@ -56,15 +56,87 @@
                     <p class="sub-question-2">Используйте шкалу от 0 до 10, где «10» означает «Полностью довольны», а
                         «0» – «Совсем недовольны».</p>
 
+                    <div class="range" onchange="showSMTHG(event)">
+                        <input type="radio" id="0" name="scale" value="0">
+                        <label for="0">0</label>
+                        <input type="radio" id="1" name="scale" value="1">
+                        <label for="1">1</label>
+                        <input type="radio" id="2" name="scale" value="2">
+                        <label for="2">2</label>
+                        <input type="radio" id="3" name="scale" value="3">
+                        <label for="3">3</label>
+                        <input type="radio" id="4" name="scale" value="4">
+                        <label for="4">4</label>
+                        <input type="radio" id="5" name="scale" value="5">
+                        <label for="5">5</label>
+                        <input type="radio" id="6" name="scale" value="6">
+                        <label for="6">6</label>
+                        <input type="radio" id="7" name="scale" value="7">
+                        <label for="7">7</label>
+                        <input type="radio" id="8" name="scale" value="8">
+                        <label for="8">8</label>
+                        <input type="radio" id="9" name="scale" value="9">
+                        <label for="9">9</label>
+                        <input type="radio" id="10" name="scale" value="10">
+                        <label for="10">10</label>
+                    </div>
 
-                    <input type="radio" id="familiar" name="familiarity" value="familiar">
-                    <label for="familiar">Да, знаком(а) лично</label>
-                    <input type="radio" id="knowName" name="familiarity" value="knowName">
-                    <label for="knowName">Знаю как зовут менеджера, но лично не знаком(а)</label>
-                    <input type="radio" id="notFamiliar" name="familiarity" value="notFamiliar">
-                    <label for="notFamiliar">Не знаком(а) с менеджером и не знаю, как его (её) зовут</label>
-                    <input type="radio" id="diffToAnswer" name="familiarity" value="diffToAnswer">
-                    <label for="diffToAnswer">Затрудняюсь ответить</label>
+                    <div id="q-3-1" class="q-3-1 hidden">
+                        <!-- <p class="sub-1">Очень плохо</p> -->
+                        <p class="sub-2">Что вас разочаровало?</p>
+                        <p class="sub-3">Можно выбрать несколько вариантов</p>
+                        <input type="checkbox" id="incompetence" name="sadFor" value="incompetence">
+                        <label for="incompetence">Некомпетентность</label>
+                        <input type="checkbox" id="badChoice" name="sadFor" value="badChoice">
+                        <label for="badChoice">Предлагает не то, что мне нужно</label>
+                        <input type="checkbox" id="notFast" name="sadFor" value="notFast">
+                        <label for="notFast">Скорость ответа на запросы</label>
+                        <input type="checkbox" id="diffToCall" name="sadFor" value="diffToCall">
+                        <label for="diffToCall">Сложно связаться</label>
+                    </div>
+
+                    <div id="q-3-2" class="q-3-2 hidden">
+                        <p class="sub-2">Что стоит улучшить в работе менеджера?</p>
+                        <p class="sub-3">Можно выбрать несколько вариантов</p>
+                        <input type="checkbox" id="getBetter" name="makeBetter" value="getBetter">
+                        <label for="getBetter">Компетентность</label>
+                        <input type="checkbox" id="getBetterChoice" name="makeBetter" value="getBetterChoice">
+                        <label for="getBetterChoice">Предлагать то, что нужно именно мне</label>
+                        <input type="checkbox" id="getBetterSpeed" name="makeBetter" value="getBetterSpeed">
+                        <label for="getBetterSpeed">Скорость ответа на запросы</label>
+                        <input type="checkbox" id="getBetterCall" name="makeBetter" value="getBetterCall">
+                        <label for="getBetterCall">Доступность для связи</label>
+                    </div>
+
+                    <div id="q-3-3" class="q-3-3 hidden">
+                        <p class="sub-2">За что можно похвалить менеджера?</p>
+                        <p class="sub-3">Можно выбрать несколько вариантов</p>
+                        <input type="checkbox" id="gladForProfeccionality" name="gladFor"
+                            value="gladForProfeccionality">
+                        <label for="gladForProfeccionality">Профессионализм</label>
+                        <input type="checkbox" id="gladForChoice" name="gladFor" value="gladForChoice">
+                        <label for="gladForChoice">Предлагает то, что мне нужно</label>
+                        <input type="checkbox" id="gladForAnswers" name="gladFor" value="gladForAnswers">
+                        <label for="gladForAnswers">Быстро отвечает на запросы</label>
+                        <input type="checkbox" id="gladForEasyCall" name="gladFor" value="gladForEasyCall">
+                        <label for="gladForEasyCall">Легко связаться</label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="namePM" name="q-4">
+                    <p>Будем благодарны, если вы поделитесь опытом коммуникации с персональным менеджером Росбанка</p>
+                    <input type="text" id="familiar" name="namePM" value="" placeholder="Ваш комментарий">
+                </fieldset>
+
+
+
+                <fieldset name="q-5">
+                    <p>Можем ли мы связаться с вами для уточнения некоторых ответов?</p>
+                    <input type="radio" id="yes" name="canCall" value="yes">
+                    <label for="yes">Да, конечно</label>
+                    <input type="radio" id="no" name="canCall" value="no">
+                    <label for="no">Нет, не нужно</label>
+
                 </fieldset>
 
 
@@ -76,58 +148,6 @@
 
 
 
-
-
-
-                <!-- <div class="rating" onchange="handleStar(event)">
-                    <input type="radio" name="star" id="star1" value="5">
-                    <label for="star1" class="fa fa-star" id="star1label"></label>
-                    <input type="radio" name="star" id="star2" value="4">
-                    <label for="star2" class="fa fa-star" id="star2label"></label>
-                    <input type="radio" name="star" id="star3" value="3">
-                    <label for="star3" class="fa fa-star" id="star3label"></label>
-                    <input type="radio" name="star" id="star4" value="2">
-                    <label for="star4" class="fa fa-star" id="star4label"></label>
-                    <input type="radio" name="star" id="star5" value="1">
-                    <label for="star5" class="fa fa-star" id="star5label"></label>
-                </div> 
-                <div class="error-message hidden" id='error-message'>
-                    <p class="message">Пожалуйста, выберите оценку от 1 до 5</p>
-                </div>
-                <div class="content">
-                    <div class="q-1 hidden" id='question1'>
-                        <p class="question">Что нам нужно улучшить?</p>
-                        <p class="sub-question">Можно выбрать несколько вариантов</p>
-                        <fieldset onchange="inputChange()">
-                            <input type="checkbox" id="amount" name="sadFor" value="amount">
-                            <label for="amount">Количество банкоматов в моем городе</label>
-                            <input type="checkbox" id="badWork" name="sadFor" value="badWork">
-                            <label for="badWork">Исправную работу банкоматов</label>
-                            <input type="checkbox" id="slowWork" name="sadFor" value="slowWork">
-                            <label for="slowWork">Скорость работы банкоматов</label>
-                            <input type="checkbox" id="notEnoughfunc" name="sadFor" value="notEnoughfunc">
-                            <label for="notEnoughfunc">Широту функционала в банкоматах</label>
-                            <input type="checkbox" id="badMenu" name="sadFor" value="badMenu">
-                            <label for="badMenu">Простоту меню</label>
-                            <input type="checkbox" id="another" name="sadFor" value="another"
-                                onchange="toggleComment()">
-                            <label for="another">Другое (укажите):</label>
-                        </fieldset>
-                    </div>
-                    <div class="error-message_2 hidden" id="error_2">
-                        <p class="message">Пожалуйста, выберите вариант ответа</p>
-                    </div>
-                    <div class="comment hidden" id="comment_div">
-                        <p class="comment_p ">Будем признательны Вам за любую дополнительную информацию о
-                            вашем опыте использования банкоматов Росбанка и банков-партнеров:</p>
-                        <textarea cols="60" name="text" wrap="soft" name="comment" id="comment"
-                            placeholder="Ваш комментарий..." value="" oninput="handleComment(event)"
-                            class=""></textarea>
-                    </div>
-                    <div class="error-message_3 hidden" id="error_3">
-                        <p class="message">Пожалуйста, введите комментарий</p>
-                    </div>
-                </div>-->
             </form>
         </div>
 
