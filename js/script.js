@@ -80,15 +80,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 form.onsubmit = function (e) {
-    // e.preventDefault()
-    // var condition = Boolean(
-    //     document.querySelector('input[name="familiarity"]:checked').id === "notFamiliar" ||
-    //     document.querySelector('input[name="familiarity"]:checked').id === "diffToAnswer" &&
-    //     document.querySelector('input[name="canCall"]:checked').id !== "yes" &&
-    //     document.querySelector('input[name="canCall"]:checked').id !== "no")
-    // let checked = document.querySelectorAll('input[type=radio]')
 
-    // checked.map(el => console.log(el.checked))
+    // if (document.getElementById("notFamiliar").checked === true ||
+    //     document.getElementById("diffToAnswer").checked === true &&
+    //     document.getElementById("yes").checked === true ||
+    //     document.getElementById("no").checked === true) {
+    //     form.onsubmit()
+    // } else {
+    //     e.preventDefault()
+    // }
 
 }
 
