@@ -27,7 +27,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 360px;
+    max-width: 500px;
     margin: 0 auto;
     min-height: 100%;
     border: 1px solid rgba(35, 35, 35, 0.1);
@@ -474,5 +474,5 @@ body {
 }
 
 #q-5 {
-    min-height: calc(100vh - 130px)
+    /* min-height: calc(100vh - 130px) */
 }
