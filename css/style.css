@@ -155,7 +155,7 @@ input[type=text], textarea {
     min-height: 40px;
     padding: 10px 15px;
     resize: none;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
 }
 
 textarea:focus {
@@ -356,6 +356,7 @@ fieldset p {
     line-height: 23px;
     color: #1E2025;
     margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .wrapper {
@@ -421,6 +422,7 @@ input[type=text]::placeholder {
     line-height: 19px;
     color: #000C1A;
     margin-bottom: 8px;
+    margin-top: 20px;
 }
 
 .sub-3 {
@@ -438,4 +440,39 @@ input[type=text]::placeholder {
     width: 100%;
     justify-content: space-between;
     margin-bottom: 15px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.q-3-1, .q-3-2, .q-3-3 {
+    margin-top: 20px;
+    scroll-margin: 20px;
+}
+
+
+
+.error {
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+    margin: 0 0 15px 10px;
+}
+
+#q-5 {
+    min-height: calc(100vh - 130px)
 }

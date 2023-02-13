@@ -29,7 +29,7 @@
                     <p>Ваши ответы помогут нам узнать о проблемах и сделать Ваше обслуживание в банке лучше.</p>
                 </div>
 
-                <fieldset name="q-1">
+                <fieldset id="q-1" onchange="q1Handler(event)">
                     <p>Знакомы ли вы со своим персональным менеджером?</p>
                     <input type="radio" id="familiar" name="familiarity" value="familiar">
                     <label for="familiar">Да, знаком(а) лично</label>
@@ -39,14 +39,17 @@
                     <label for="notFamiliar">Не знаком(а) с менеджером и не знаю, как его (её) зовут</label>
                     <input type="radio" id="diffToAnswer" name="familiarity" value="diffToAnswer">
                     <label for="diffToAnswer">Затрудняюсь ответить</label>
+                    <p class="error hidden" id="err-1">Пожалуйста, выберите вариант ответа</p>
                 </fieldset>
 
-                <fieldset class="namePM" name="q-2">
+                <fieldset id="q-2" class="namePM">
                     <p>Как зовут вашего персонального менеджера?</p>
-                    <input type="text" id="familiar" name="namePM" value="" placeholder="Введите имя">
+                    <input type="text" id="namePM" name="namePM" value="" placeholder="Введите имя"
+                        onchange="q2Handler(event)">
+                    <p class="error hidden" id="err-2">Пожалуйста, введите комментарий</p>
                 </fieldset>
 
-                <fieldset name="q-3">
+                <fieldset id="q-3" class="a">
                     <p class="q-3">Насколько вы довольны
                         работой вашего персонального менеджера?</p>
                     <p class="sub-question">Пожалуйста, оценивайте в этом вопросе именно взаимодействие с персональным
@@ -56,7 +59,7 @@
                     <p class="sub-question-2">Используйте шкалу от 0 до 10, где «10» означает «Полностью довольны», а
                         «0» – «Совсем недовольны».</p>
 
-                    <div class="range" onchange="showSMTHG(event)">
+                    <div class="range" onchange="q3RangeHandler(event)">
                         <input type="radio" id="0" name="scale" value="0">
                         <label for="0">0</label>
                         <input type="radio" id="1" name="scale" value="1">
@@ -80,9 +83,8 @@
                         <input type="radio" id="10" name="scale" value="10">
                         <label for="10">10</label>
                     </div>
-
-                    <div id="q-3-1" class="q-3-1 hidden">
-                        <!-- <p class="sub-1">Очень плохо</p> -->
+                    <p class="error  hidden" id="err-3">Пожалуйста, выберите оценку</p>
+                    <div id="q-3-1" class="q-3-1 hidden" onchange="subQuestionHandler(event)">
                         <p class="sub-2">Что вас разочаровало?</p>
                         <p class="sub-3">Можно выбрать несколько вариантов</p>
                         <input type="checkbox" id="incompetence" name="sadFor" value="incompetence">
@@ -121,22 +123,23 @@
                         <input type="checkbox" id="gladForEasyCall" name="gladFor" value="gladForEasyCall">
                         <label for="gladForEasyCall">Легко связаться</label>
                     </div>
+                    <p class="error hidden" id="err-4">Пожалуйста, выберите вариант ответа</p>
                 </fieldset>
 
-                <fieldset class="namePM" name="q-4">
+                <fieldset id="q-4" class="namePM" onchange="q4Handler(event)">
                     <p>Будем благодарны, если вы поделитесь опытом коммуникации с персональным менеджером Росбанка</p>
-                    <input type="text" id="familiar" name="namePM" value="" placeholder="Ваш комментарий">
+                    <input type="text" id="descr" name="descr" value="" placeholder="Ваш комментарий">
                 </fieldset>
 
 
 
-                <fieldset name="q-5">
+                <fieldset id="q-5">
                     <p>Можем ли мы связаться с вами для уточнения некоторых ответов?</p>
                     <input type="radio" id="yes" name="canCall" value="yes">
                     <label for="yes">Да, конечно</label>
                     <input type="radio" id="no" name="canCall" value="no">
                     <label for="no">Нет, не нужно</label>
-
+                    <p class="error hidden" id="err-5">Пожалуйста, выберите вариант ответа</p>
                 </fieldset>
 
 

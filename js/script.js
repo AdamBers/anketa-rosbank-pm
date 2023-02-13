@@ -1,23 +1,95 @@
-const q_1 = document.getElementById("q-3-1")
-const q_2 = document.getElementById("q-3-2")
-const q_3 = document.getElementById("q-3-3")
+const form = document.getElementById('myForm')
 
-function showSMTHG(e) {
+function goTo(element) {
+    setTimeout(function () {
+        document.getElementById(element).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start',
+        })
+    }, 500)
+}
+
+function q1Handler(e) {
+    if (e.target.id === "notFamiliar" || e.target.id === "diffToAnswer") {
+        document.getElementById("q-5").classList.remove("hidden")
+        document.getElementById("err-2").classList.add("hidden")
+        document.getElementById("err-3").classList.add("hidden")
+        document.getElementById("err-4").classList.add("hidden")
+        goTo("q-5")
+    } else {
+        document.getElementById("q-2").classList.remove("hidden")
+        goTo("q-2")
+    }
+    document.getElementById("err-1").classList.add("hidden")
+
+}
+
+function q2Handler(e) {
+    if (e.target.value.length > 0) {
+        document.getElementById("q-3").classList.remove("hidden");
+        goTo("q-3")
+    }
+    document.getElementById("err-2").classList.add("hidden")
+}
+
+function q3RangeHandler(e) {
     if (e.target.value <= 6) {
-        q_1.classList.remove('hidden')
-        q_2.classList.add('hidden')
-        q_3.classList.add('hidden')
+        console.log(e)
+        document.getElementById("q-3-1").classList.remove('hidden')
+        document.getElementById("q-3-2").classList.add('hidden')
+        document.getElementById("q-3-3").classList.add('hidden')
+        goTo("q-3-1")
     }
     if (e.target.value == 7 || e.target.value == 8) {
-        q_1.classList.add('hidden')
-        q_2.classList.remove('hidden')
-        q_3.classList.add('hidden')
+        document.getElementById("q-3-1").classList.add('hidden')
+        document.getElementById("q-3-2").classList.remove('hidden')
+        document.getElementById("q-3-3").classList.add('hidden')
+        goTo("q-3-2")
     }
     if (e.target.value == 9 || e.target.value == 10) {
-        q_1.classList.add('hidden')
-        q_2.classList.add('hidden')
-        q_3.classList.remove('hidden')
+        document.getElementById("q-3-1").classList.add('hidden')
+        document.getElementById("q-3-2").classList.add('hidden')
+        document.getElementById("q-3-3").classList.remove('hidden')
+        goTo("q-3-3")
     }
+    document.getElementById("err-3").classList.add("hidden")
+    // document.getElementById("err-4").classList.remove("hidden")
+}
+
+function subQuestionHandler(e) {
+    document.getElementById("q-4").classList.remove('hidden')
+    document.getElementById("err-4").classList.add("hidden")
+
+    goTo("q-4")
+}
+
+function q4Handler(e) {
+    document.getElementById("q-5").classList.remove('hidden')
+    goTo("q-5")
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    document.getElementById("q-5").addEventListener("change", () => {
+        document.getElementById("err-5").classList.add("hidden")
+    })
+
+
+})
+
+
+
+
+form.onsubmit = function (e) {
+    // e.preventDefault()
+    // var condition = Boolean(
+    //     document.querySelector('input[name="familiarity"]:checked').id === "notFamiliar" ||
+    //     document.querySelector('input[name="familiarity"]:checked').id === "diffToAnswer" &&
+    //     document.querySelector('input[name="canCall"]:checked').id !== "yes" &&
+    //     document.querySelector('input[name="canCall"]:checked').id !== "no")
+    // let checked = document.querySelectorAll('input[type=radio]')
+
+    // checked.map(el => console.log(el.checked))
+
 }
 
 
@@ -26,8 +98,111 @@ function showSMTHG(e) {
 
 
 
+// var condition = Boolean(
+//     document.querySelector('input[name="familiarity"]:checked').id === "notFamiliar" ||
+//     document.querySelector('input[name="familiarity"]:checked').id === "diffToAnswer" &&
+//     document.querySelector('input[name="canCall"]:checked').id !== "yes" &&
+//     document.querySelector('input[name="canCall"]:checked').id !== "no")
+
+// if (document.querySelector('input[name="familiarity"]:checked').id === "notFamiliar" ||
+//     document.querySelector('input[name="familiarity"]:checked').id === "diffToAnswer" &&
+//     document.querySelector('input[name="canCall"]:checked').id === "yes" ||
+//     document.querySelector('input[name="canCall"]:checked').id === "no") {
+//     document.getElementById("myForm").submit()
+// }
 
 
+
+
+
+
+
+
+
+
+
+
+// if (document.querySelector('input[name="familiarity"]:checked')?.id === "notFamiliar" ||
+//     document.querySelector('input[name="familiarity"]:checked')?.id === "diffToAnswer" &&
+//     document.querySelector('input[name="canCall"]:checked') === null) {
+//     e.preventDefault()
+// }
+
+
+
+
+
+
+
+
+
+
+// if (condition) {
+//     document.getElementById("err-5").classList.remove("hidden")
+//     e.preventDefault()
+// }
+
+
+// if (!condition) {
+//     e.preventDefault()
+//     if (document.querySelector('input[name="canCall"]:checked') === null) {
+//         document.getElementById("err-5").classList.remove("hidden")
+//         goTo("q-5")
+//         e.preventDefault()
+//     }
+
+//     if (document.querySelector('input[name="sadFor"]:checked') === null &&
+//         document.querySelector('input[name="scale"]:checked') !== null) {
+//         document.getElementById("err-4").classList.remove("hidden")
+//         goTo("q-4")
+//         e.preventDefault()
+//     }
+
+//     if (document.querySelector('input[name="scale"]:checked') === null) {
+//         document.getElementById("err-3").classList.remove("hidden")
+//         goTo("q-3")
+//         e.preventDefault()
+//     }
+
+//     if (document.getElementById("namePM").value.length === 0) {
+//         document.getElementById("err-2").classList.remove("hidden")
+//         goTo("q-2")
+//         e.preventDefault()
+//     }
+
+//     if (document.querySelector('input[name="familiarity"]:checked') === null) {
+//         document.getElementById("err-1").classList.remove("hidden")
+//         goTo("q-1")
+//         e.preventDefault()
+//     }
+// }
+// e.preventDefault()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// window.onload = (event) => {
+//     setTimeout(function () {
+//         document.getElementById("q-1").style.backgroundColor = "#c5c5c5"
+//     }, 100)
+//     setTimeout(function () {
+//         document.getElementById("q-1").style.backgroundColor = "transparent"
+//     }, 300)
+// };
 
 
 
