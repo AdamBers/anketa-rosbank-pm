@@ -338,6 +338,8 @@ textarea::placeholder {
     font-size: 14px;
     line-height: 16px;
     color: #1E2025;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #001C3D;
 }
 
 
@@ -345,6 +347,7 @@ textarea::placeholder {
 
 fieldset {
     border: none;
+
     margin-bottom: 40px;
 }
 
@@ -401,6 +404,7 @@ input[type=text]::placeholder {
     align-items: center;
     text-align: center;
     color: #000C1A;
+    margin-bottom: 55px;
 }
 
 .sub-1 {
@@ -437,9 +441,11 @@ input[type=text]::placeholder {
 
 .range {
     display: flex;
-    width: 100%;
+    align-items: center;
     justify-content: space-between;
-    margin-bottom: 15px;
+    width: calc(100% - 40px);
+    margin: auto;
+    /* margin-bottom: 25px; */
 }
 
 .hidden {
@@ -475,4 +481,60 @@ body {
 
 #q-5 {
     /* min-height: calc(100vh - 130px) */
+}
+
+
+
+.range input[type=radio]+label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+    color: #000C1A;
+    padding: 8px;
+    background: #E5E7EA;
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+.range input[type=radio]:checked+label {
+    width: 30px;
+    height: 30px;
+    background: #E40038;
+    border: 5px solid #EBEDEF;
+    color: #E40038;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 21px;
+
+}
+
+.range span {
+    background: transparent;
+    position: relative;
+    top: -30px
+}
+
+.rateDescription {
+    position: relative;
+    height: 24px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 24px;
+    border-bottom: 1px solid #EBEDEF;
+    color: #E40038;
+    padding-bottom: 55px;
+    margin-bottom: 8px;
+    width: fit-content;
 }

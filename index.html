@@ -59,30 +59,34 @@
                     <p class="sub-question-2">Используйте шкалу от 0 до 10, где «10» означает «Полностью довольны», а
                         «0» – «Совсем недовольны».</p>
 
-                    <div class="range" onchange="q3RangeHandler(event)">
+                    <div class="range" onchange="q3RangeHandler(event)" id="range">
                         <input type="radio" id="0" name="scale" value="0">
-                        <label for="0">0</label>
+                        <label for="0"><span>0</span></label>
                         <input type="radio" id="1" name="scale" value="1">
-                        <label for="1">1</label>
+                        <label for="1"><span>1</span></label>
                         <input type="radio" id="2" name="scale" value="2">
-                        <label for="2">2</label>
+                        <label for="2"><span>2</span></label>
                         <input type="radio" id="3" name="scale" value="3">
-                        <label for="3">3</label>
+                        <label for="3"><span>3</span></label>
                         <input type="radio" id="4" name="scale" value="4">
-                        <label for="4">4</label>
+                        <label for="4"><span>4</span></label>
                         <input type="radio" id="5" name="scale" value="5">
-                        <label for="5">5</label>
+                        <label for="5"><span>5</span></label>
                         <input type="radio" id="6" name="scale" value="6">
-                        <label for="6">6</label>
+                        <label for="6"><span>6</span></label>
                         <input type="radio" id="7" name="scale" value="7">
-                        <label for="7">7</label>
+                        <label for="7"><span>7</span></label>
                         <input type="radio" id="8" name="scale" value="8">
-                        <label for="8">8</label>
+                        <label for="8"><span>8</span></label>
                         <input type="radio" id="9" name="scale" value="9">
-                        <label for="9">9</label>
+                        <label for="9"><span>9</span></label>
                         <input type="radio" id="10" name="scale" value="10">
-                        <label for="10">10</label>
+                        <label for="10"><span>10</span></label>
                     </div>
+
+
+                    <p class="rateDescription hidden" id="rateDescription"> </p>
+
                     <p class="error  hidden" id="err-3">Пожалуйста, выберите оценку</p>
                     <div id="q-3-1" class="q-3-1 hidden" onchange="subQuestionHandler(event)">
                         <p class="sub-2">Что вас разочаровало?</p>
