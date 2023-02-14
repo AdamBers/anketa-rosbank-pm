@@ -47,38 +47,36 @@ const descrItems = [
 ]
 
 function q3RangeHandler(e) {
-    console.log(descrItems[e.target.value])
     document.getElementById("rateDescription").innerHTML = descrItems[e.target.value]
     document.getElementById("rateDescription").classList.remove("hidden")
     const rangeWidth = document.getElementById("range").offsetWidth - 32
     const elementWidth = document.getElementById("rateDescription").offsetWidth
-    console.log(rangeWidth, elementWidth)
-    console.log(document.getElementById("rateDescription").style.left = ((((rangeWidth - 40) / 10) * e.target.value) - ((elementWidth / 2)) + 50) + "px")
+    document.getElementById("rateDescription").style.left = ((((rangeWidth - 40) / 10) * e.target.value) - ((elementWidth / 2)) + 50) + "px"
+    // if (e.target.value === 10) {
+    //     document.getElementById("rateDescription").style.right = "0px"
+    // }
 
 
     if (e.target.value <= 6) {
         document.getElementById("q-3-1").classList.remove('hidden')
         document.getElementById("q-3-2").classList.add('hidden')
         document.getElementById("q-3-3").classList.add('hidden')
-        goTo("q-3")
     }
     if (e.target.value == 7 || e.target.value == 8) {
         document.getElementById("q-3-1").classList.add('hidden')
         document.getElementById("q-3-2").classList.remove('hidden')
         document.getElementById("q-3-3").classList.add('hidden')
-        goTo("q-3")
     }
     if (e.target.value == 9 || e.target.value == 10) {
         document.getElementById("q-3-1").classList.add('hidden')
         document.getElementById("q-3-2").classList.add('hidden')
         document.getElementById("q-3-3").classList.remove('hidden')
-        goTo("q-3")
     }
     document.getElementById("err-3").classList.add("hidden")
 }
 
-function subQuestionHandler(e) {
-    document.getElementById("q-4").classList.remove('hidden')
+function subQuestionHandler() {
+    // document.getElementById("q-4").classList.remove('hidden')
     document.getElementById("err-4").classList.add("hidden")
     goTo("q-4")
 }

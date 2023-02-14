@@ -59,8 +59,8 @@ form {
 .main-question p {
     font-family: "Montserrat", sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 21px;
+    font-weight: 800;
+    font-size: 20px;
     line-height: 26px;
     text-align: center;
     color: #1E2025;
@@ -194,7 +194,7 @@ input[type=checkbox]~label {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 500;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 16px;
     display: flex;
     align-items: center;
@@ -494,10 +494,10 @@ body {
     border-radius: 50%;
     font-family: 'Roboto';
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-    color: #000C1A;
+    color: #8B95A4;
     padding: 8px;
     background: #E5E7EA;
     margin-bottom: 12px;
