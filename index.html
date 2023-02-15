@@ -42,14 +42,14 @@
                     <p class="error hidden" id="err-1">Пожалуйста, выберите вариант ответа</p>
                 </fieldset>
 
-                <fieldset id="q-2" class="namePM">
+                <fieldset id="q-2" class="namePM hidden">
                     <p>Как зовут вашего персонального менеджера?</p>
                     <input type="text" id="namePM" name="namePM" value="" placeholder="Введите имя"
                         onchange="q2Handler(event)">
                     <p class="error hidden" id="err-2">Пожалуйста, введите комментарий</p>
                 </fieldset>
 
-                <fieldset id="q-3" class="a">
+                <fieldset id="q-3" class="hidden">
                     <p class="q-3">Насколько вы довольны
                         работой вашего персонального менеджера?</p>
                     <p class="sub-question">Пожалуйста, оценивайте в этом вопросе именно взаимодействие с персональным
@@ -83,7 +83,7 @@
                         <input type="radio" id="10" name="scale" value="10">
                         <label for="10"><span>10</span></label>
                     </div>
-                   
+
                     <p class="rateDescription hidden" id="rateDescription"> </p>
 
                     <p class="error  hidden" id="err-3">Пожалуйста, выберите оценку</p>
@@ -113,7 +113,7 @@
                         <label for="getBetterCall">Доступность для связи</label>
                     </div>
 
-                    
+
                     <div id="q-3-3" class="q-3-3 hidden" onchange="subQuestionHandler(event)">
                         <p class="sub-2">За что можно похвалить менеджера?</p>
                         <p class="sub-3">Можно выбрать несколько вариантов</p>
@@ -130,14 +130,14 @@
                     <p class="error hidden" id="err-4">Пожалуйста, выберите вариант ответа</p>
                 </fieldset>
 
-                <fieldset id="q-4" class="namePM" onchange="q4Handler(event)">
+                <fieldset id="q-4" class="namePM hidden" onchange="q4Handler(event)">
                     <p>Будем благодарны, если вы поделитесь опытом коммуникации с персональным менеджером Росбанка</p>
                     <input type="text" id="descr" name="descr" value="" placeholder="Ваш комментарий">
                 </fieldset>
 
 
 
-                <fieldset id="q-5">
+                <fieldset id="q-5" class="hidden">
                     <p>Можем ли мы связаться с вами для уточнения некоторых ответов?</p>
                     <input type="radio" id="yes" name="canCall" value="yes">
                     <label for="yes">Да, конечно</label>

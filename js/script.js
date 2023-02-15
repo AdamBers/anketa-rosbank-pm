@@ -15,6 +15,9 @@ function q1Handler(e) {
         document.getElementById("err-2").classList.add("hidden")
         document.getElementById("err-3").classList.add("hidden")
         document.getElementById("err-4").classList.add("hidden")
+        document.getElementById("q-2").classList.add("hidden")
+        document.getElementById("q-3").classList.add("hidden")
+        document.getElementById("q-4").classList.add("hidden")
         goTo("q-5")
     } else {
         document.getElementById("q-2").classList.remove("hidden")
@@ -95,11 +98,16 @@ function q3RangeHandler(e) {
         document.getElementById("q-3-3").classList.remove('hidden')
     }
     document.getElementById("err-3").classList.add("hidden")
+    goTo("q-3-1")
+    goTo("q-3-2")
+    goTo("q-3-3")
 }
 
 function subQuestionHandler() {
     // document.getElementById("q-4").classList.remove('hidden')
     document.getElementById("err-4").classList.add("hidden")
+    document.getElementById("q-4").classList.remove('hidden')
+
     goTo("q-4")
 }
 
