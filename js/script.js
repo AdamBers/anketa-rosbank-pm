@@ -62,17 +62,22 @@ function q3RangeHandler(e) {
 
 
 
-    console.log(document.getElementById("incompetence").checked)
+    // console.log(document.getElementById("incompetence").checked)
 
     document.getElementById("rateDescription").innerHTML = descrItems[e.target.value]
     document.getElementById("rateDescription").classList.remove("hidden")
-    const rangeWidth = document.getElementById("range").offsetWidth - 32
+    const rangeWidth = document.getElementById("range").offsetWidth - 40
     const elementWidth = document.getElementById("rateDescription").offsetWidth
-    document.getElementById("rateDescription").style.left = ((((rangeWidth - 40) / 10) * e.target.value) - ((elementWidth / 2)) + 50) + "px"
-    // if (e.target.value === 10) {
-    //     document.getElementById("rateDescription").style.right = "0px"
-    // }
+    let leftOffset = ((rangeWidth / 10) * e.target.value) - ((elementWidth / 2))
+    console.log(rangeWidth, elementWidth, leftOffset)
+    document.getElementById("rateDescription").style.left = leftOffset + 26 + "px"
+    if (leftOffset < 0) {
+        document.getElementById("rateDescription").style.left = '0px'
+    }
 
+    if (rangeWidth < leftOffset + elementWidth - 26) {
+        document.getElementById("rateDescription").style.left = rangeWidth - elementWidth + 50 + "px"
+    }
 
     if (e.target.value <= 6) {
         document.getElementById("q-3-1").classList.remove('hidden')

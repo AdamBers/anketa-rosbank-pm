@@ -443,7 +443,7 @@ input[type=text]::placeholder {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: calc(100% - 40px);
+    width: calc(100% - 20px);
     margin: auto;
     /* margin-bottom: 25px; */
 }
