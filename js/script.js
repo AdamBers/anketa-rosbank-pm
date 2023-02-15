@@ -125,7 +125,7 @@ function q4Handler(e) {
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("q-5").addEventListener("change", () => {
         document.getElementById("err-5").classList.add("hidden")
-        document.getElementById("send").classList.remove("inVisible")
+        document.getElementById("send").classList.remove("hidden")
     })
 })
 
