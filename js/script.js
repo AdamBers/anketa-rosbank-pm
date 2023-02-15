@@ -9,18 +9,6 @@ function goTo(element) {
     }, 500)
 }
 
-
-function hideKeyboard(element) {
-    element.attr('readonly', 'readonly'); // Force keyboard to hide on input field.
-    element.attr('disabled', 'true'); // Force keyboard to hide on textarea field.
-    setTimeout(function () {
-        element.blur();  //actually close the keyboard
-        // Remove readonly attribute after keyboard is hidden.
-        element.removeAttr('readonly');
-        element.removeAttr('disabled');
-    }, 100);
-}
-
 function q1Handler(e) {
     if (e.target.id === "notFamiliar" || e.target.id === "diffToAnswer") {
         document.getElementById("q-5").classList.remove("hidden")
@@ -49,7 +37,7 @@ function q2Handler(e) {
         goTo("q-3")
     }
     document.getElementById("err-2").classList.add("hidden")
-    hideKeyboard()
+    document.getElementById("namePM").blur()
 }
 
 const descrItems = [
