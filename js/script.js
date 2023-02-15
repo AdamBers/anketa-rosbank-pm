@@ -107,6 +107,7 @@ function subQuestionHandler() {
     // document.getElementById("q-4").classList.remove('hidden')
     document.getElementById("err-4").classList.add("hidden")
     document.getElementById("q-4").classList.remove('hidden')
+    document.getElementById("q-5").classList.remove('hidden')
 
     goTo("q-4")
 }
