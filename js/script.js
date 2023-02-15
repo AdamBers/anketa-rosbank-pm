@@ -47,6 +47,23 @@ const descrItems = [
 ]
 
 function q3RangeHandler(e) {
+    document.getElementById("incompetence").checked = false
+    document.getElementById("badChoice").checked = false
+    document.getElementById("notFast").checked = false
+    document.getElementById("diffToCall").checked = false
+    document.getElementById("getBetter").checked = false
+    document.getElementById("getBetterChoice").checked = false
+    document.getElementById("getBetterSpeed").checked = false
+    document.getElementById("getBetterCall").checked = false
+    document.getElementById("gladForProfeccionality").checked = false
+    document.getElementById("gladForChoice").checked = false
+    document.getElementById("gladForAnswers").checked = false
+    document.getElementById("gladForEasyCall").checked = false
+
+
+
+    console.log(document.getElementById("incompetence").checked)
+
     document.getElementById("rateDescription").innerHTML = descrItems[e.target.value]
     document.getElementById("rateDescription").classList.remove("hidden")
     const rangeWidth = document.getElementById("range").offsetWidth - 32
@@ -95,9 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
 form.onsubmit = function (e) {
     if ((document.getElementById("notFamiliar").checked === true ||
         document.getElementById("diffToAnswer").checked === true) &&
-        (document.getElementById("yes").checked === true ||
-            document.getElementById("no").checked === true)) {
-
+        (document.getElementById("yes").checked === true || document.getElementById("no").checked === true)) {
         document.getElementById("namePM").value = ''
         document.querySelector('input[name="scale"]:checked') = false
         document.querySelector('input[name="sadFor"]:checked') = false
@@ -106,9 +121,7 @@ form.onsubmit = function (e) {
         submit()
     }
     if ((document.getElementById("notFamiliar").checked === true ||
-        document.getElementById("diffToAnswer").checked === true) &&
-        (document.getElementById("yes").checked === false &&
-            document.getElementById("no").checked === false)) {
+        document.getElementById("diffToAnswer").checked === true) && (document.getElementById("yes").checked === false && document.getElementById("no").checked === false)) {
         document.getElementById("err-5").classList.remove("hidden")
         e.preventDefault()
     }
@@ -124,8 +137,7 @@ form.onsubmit = function (e) {
             e.preventDefault()
         }
 
-        if (document.querySelector('input[name="sadFor"]:checked') === null &&
-            document.querySelector('input[name="scale"]:checked') !== null) {
+        if ((document.querySelector('input[name="sadFor"]:checked') === null && document.querySelector('input[name="makeBetter"]:checked') === null) && document.querySelector('input[name="gladFor"]:checked') === null) {
             document.getElementById("err-4").classList.remove("hidden")
             goTo("q-4")
             e.preventDefault()
