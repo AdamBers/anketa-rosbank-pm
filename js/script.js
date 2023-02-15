@@ -18,12 +18,16 @@ function q1Handler(e) {
         document.getElementById("q-2").classList.add("hidden")
         document.getElementById("q-3").classList.add("hidden")
         document.getElementById("q-4").classList.add("hidden")
+
+
         goTo("q-5")
     } else {
         document.getElementById("q-2").classList.remove("hidden")
         goTo("q-2")
     }
     document.getElementById("err-1").classList.add("hidden")
+    document.getElementById("yes").checked = false
+    document.getElementById("no").checked = false
 
 }
 
