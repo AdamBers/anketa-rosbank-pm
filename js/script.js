@@ -35,6 +35,8 @@ function q2Handler(e) {
     }
     document.getElementById("err-2").classList.add("hidden")
     document.getElementById("namePM").blur()
+    document.getElementById("namePM").inputMode = "none"
+    document.getElementById("namePM").inputMode = "text"
 }
 
 const descrItems = [
@@ -112,6 +114,11 @@ function subQuestionHandler() {
 
 function q4Handler(e) {
     document.getElementById("q-5").classList.remove('hidden')
+    document.getElementById("descr").blur()
+    document.getElementById("descr").inputMode = "none"
+    document.getElementById("descr").inputMode = "text"
+
+
     goTo("q-5")
 }
 
