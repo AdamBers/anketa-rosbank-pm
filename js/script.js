@@ -34,7 +34,7 @@ function q2Handler(e) {
         goTo("q-3")
     }
     document.getElementById("err-2").classList.add("hidden")
-    // document.getElementById("namePM").blur()
+    document.getElementById("namePM").blur()
 }
 
 const descrItems = [
