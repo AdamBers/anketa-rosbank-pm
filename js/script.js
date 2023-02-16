@@ -18,8 +18,6 @@ function q1Handler(e) {
         document.getElementById("q-2").classList.add("hidden")
         document.getElementById("q-3").classList.add("hidden")
         document.getElementById("q-4").classList.add("hidden")
-
-
         goTo("q-5")
     } else {
         document.getElementById("q-2").classList.remove("hidden")
@@ -28,7 +26,6 @@ function q1Handler(e) {
     document.getElementById("err-1").classList.add("hidden")
     document.getElementById("yes").checked = false
     document.getElementById("no").checked = false
-
 }
 
 function q2Handler(e) {
@@ -37,7 +34,7 @@ function q2Handler(e) {
         goTo("q-3")
     }
     document.getElementById("err-2").classList.add("hidden")
-    document.getElementById("namePM").blur()
+    // document.getElementById("namePM").blur()
 }
 
 const descrItems = [
@@ -69,15 +66,11 @@ function q3RangeHandler(e) {
     document.getElementById("gladForEasyCall").checked = false
 
 
-
-    // console.log(document.getElementById("incompetence").checked)
-
     document.getElementById("rateDescription").innerHTML = descrItems[e.target.value]
     document.getElementById("rateDescription").classList.remove("hidden")
     const rangeWidth = document.getElementById("range").offsetWidth - 40
     const elementWidth = document.getElementById("rateDescription").offsetWidth
     let leftOffset = ((rangeWidth / 10) * e.target.value) - ((elementWidth / 2))
-    console.log(rangeWidth, elementWidth, leftOffset)
     document.getElementById("rateDescription").style.left = leftOffset + 26 + "px"
     if (leftOffset < 0) {
         document.getElementById("rateDescription").style.left = '0px'
